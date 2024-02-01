@@ -27,15 +27,15 @@ productRouter.post('/categories', async (req, res) => {
     }
   });
   
-  productRouter.post('/add', upload.single('image'), async (req, res) => {
+  productRouter.post('/add', async (req, res) => {
     try {
       const product = new ProductModel({
-        // category: req.body.category,
+         category: req.body.category,
         title: req.body.title,
         description: req.body.description,
         price: req.body.price,
-        oldPrice: req.body.oldPrice,
         // rating: req.body.rating,
+         image:req.body.image
       });
       await product.save();
       res.json(product);

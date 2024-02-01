@@ -1,14 +1,12 @@
 const { Schema, Model, default: mongoose } = require("mongoose");
 
 const productSchema=Schema({
-    // category: { type: mongoose.Schema.Types.ObjectId, ref: 'Category' },
+      category: String,
     title: String,
     description: String,
     price: Number,
-    oldPrice: Number,
-    // rating: Number,
-    inStock: Number,
-    // image: Buffer,
+    //  rating:Number,
+      image: String,
   })
 
   const ProductModel=mongoose.model("Product",productSchema)
