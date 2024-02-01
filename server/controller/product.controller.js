@@ -2,15 +2,15 @@ const express = require('express');
 const productRouter=express.Router()
 const multer = require('multer');
 const ProductModel = require('../model/product.model');
+const categoryModel = require('../model/category.model');
 
 
 
-const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
+
 
 productRouter.post('/categories', async (req, res) => {
     try {
-      const category = new Category({ name: req.body.name });
+      const category = new categoryModel({ name: req.body.name });
       await category.save();
       res.json(category);
     } catch (error) {
@@ -20,7 +20,7 @@ productRouter.post('/categories', async (req, res) => {
   
   productRouter.get('/categories', async (req, res) => {
     try {
-      const categories = await Category.find();
+      const categories = await categoryModel.find();
       res.json(categories);
     } catch (error) {
       res.status(500).json({ error: error.message });

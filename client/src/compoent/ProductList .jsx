@@ -4,7 +4,7 @@ import { ProductCard } from "./ProductCard ";
 import { Grid,GridItem} from "@chakra-ui/react";
 
  export const ProductList = ({ products }) => {
-   console.log(products)
+  
 
     return (
       <Grid

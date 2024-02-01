@@ -20,15 +20,9 @@ function App() {
         }}
       />
     
-<CategoryPage />
 
-    <hr
-        style={{
-          margin:"15px",
-          borderColor: 'blue', // Replace with your desired color
-          borderWidth: '2px', // Replace with your desired border width
-        }}
-      />
+
+    
     
 
 <Product />
