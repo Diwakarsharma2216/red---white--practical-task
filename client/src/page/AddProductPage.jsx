@@ -15,6 +15,8 @@ import {
   AlertIcon,
   InputGroup,
   InputRightElement,
+  Heading,
+  Text,
   
 } from '@chakra-ui/react';
 import { FaStar } from "react-icons/fa";
@@ -85,6 +87,11 @@ const ProductAddPage = () => {
 
   return (
     <ChakraProvider>
+         <Box textAlign="center" fontSize="xl">
+        <Text fontSize="3xl" fontWeight="bold" mb="4">
+         Add-Product
+        </Text>
+      </Box>
       <Box p={8}>
         <FormControl>
           <FormLabel>Title</FormLabel>
@@ -140,26 +147,11 @@ const ProductAddPage = () => {
             onChange={handleInputChange}
           />
     {product.image && (
-            <Image src={product.image} alt="Product Image" mt={2} />
+            <Image src={product.image} alt="Product Image" mt={2} height={"200px"} width={"200px"} />
           )}
         </FormControl>
 
-        {/* <FormControl mt={4}>
-          <FormLabel>Rating</FormLabel>
-          <InputGroup>
-            <Input
-              type="number"
-              name="rating"
-              value={product.rating.rate}
-              onChange={(e) => handleRatingChange(e.target.value)}
-              max={5}
-              min={0}
-            />
-            <InputRightElement pointerEvents="none">
-              <FaStar  boxSize={6} color="teal.500" />
-            </InputRightElement>
-          </InputGroup>
-        </FormControl> */}
+       
 
         <Button colorScheme="teal" mt={4} onClick={handleSubmit}>
           Add Product

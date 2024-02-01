@@ -32,9 +32,7 @@ import {
           <Text fontWeight="bold" fontSize="lg" mt="2">
             ${product.price}
           </Text>
-          <Text fontSize="sm">
-            Rating: {product.rating.rate} ({product.rating.count} reviews)
-          </Text>
+         
         </Stack>
       </Box>
     </Box>

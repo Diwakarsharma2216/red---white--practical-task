@@ -1,5 +1,6 @@
 
 import AddProductPage from "./page/AddProductPage";
+import CategoryPage from "./page/CategoryPage";
 import Product from "./page/Product";
 
 
@@ -15,6 +16,16 @@ function App() {
         style={{
           margin:"15px",
           borderColor: 'red', // Replace with your desired color
+          borderWidth: '2px', // Replace with your desired border width
+        }}
+      />
+    
+<CategoryPage />
+
+    <hr
+        style={{
+          margin:"15px",
+          borderColor: 'blue', // Replace with your desired color
           borderWidth: '2px', // Replace with your desired border width
         }}
       />
