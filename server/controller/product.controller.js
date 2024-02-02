@@ -29,21 +29,27 @@ productRouter.post('/categories', async (req, res) => {
   
   productRouter.post('/add', async (req, res) => {
     try {
-      const product = new ProductModel({
-         category: req.body.category,
-        title: req.body.title,
-        description: req.body.description,
-        price: req.body.price,
-        // rating: req.body.rating,
-         image:req.body.image
-      });
+      const { category, title, description, price, image } = req.body;
+  
+      // Check if the product already exists
+      const existingProduct = await ProductModel.findOne({ title });
+  
+      if (existingProduct) {
+        return res.status(400).json({ error: 'Product already exists' });
+      }
+  
+      // If not, add the product to the database
+      const product = new ProductModel({ category, title, description, price, oldPrice, rating, inStock, image });
       await product.save();
-      res.json(product);
+  
+      res.json({ message: 'Product added successfully' });
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
     }
   });
-  
+
+
   productRouter.get('/get', async (req, res) => {
     try {
       const products = await ProductModel.find().populate('category');

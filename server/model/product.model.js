@@ -7,6 +7,7 @@ const productSchema=Schema({
     price: Number,
     //  rating:Number,
       image: String,
+      quantity: { type: Number, default: 1 }
   })
 
   const ProductModel=mongoose.model("Product",productSchema)
