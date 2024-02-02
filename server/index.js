@@ -10,9 +10,7 @@ const { cartrouter } = require('./controller/cart.controler');
 app.use(express.json());
 app.use(cors());
 //  #### Product Routes #####
-
 app.use("/product",productRouter)
-
 //  #### cart Routes
 app.use("/cart",cartrouter)
 

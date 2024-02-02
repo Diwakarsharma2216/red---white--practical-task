@@ -1,6 +1,5 @@
 const express = require('express');
 const productRouter=express.Router()
-const multer = require('multer');
 const ProductModel = require('../model/product.model');
 const categoryModel = require('../model/category.model');
 
@@ -31,15 +30,15 @@ productRouter.post('/categories', async (req, res) => {
     try {
       const { category, title, description, price, image } = req.body;
   
-      // Check if the product already exists
+     
       const existingProduct = await ProductModel.findOne({ title });
   
       if (existingProduct) {
         return res.status(400).json({ error: 'Product already exists' });
       }
   
-      // If not, add the product to the database
-      const product = new ProductModel({ category, title, description, price, oldPrice, rating, inStock, image });
+      
+      const product = new ProductModel({ category, title, description, price, image });
       await product.save();
   
       res.json({ message: 'Product added successfully' });

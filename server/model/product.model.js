@@ -5,7 +5,6 @@ const productSchema=Schema({
     title: String,
     description: String,
     price: Number,
-    //  rating:Number,
       image: String,
       quantity: { type: Number, default: 1 }
   })
