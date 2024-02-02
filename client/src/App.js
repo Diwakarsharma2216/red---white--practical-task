@@ -1,5 +1,6 @@
 
 import AddProductPage from "./page/AddProductPage";
+import CartPage from "./page/CartPage";
 import CategoryPage from "./page/CategoryPage";
 import Product from "./page/Product";
 
@@ -8,8 +9,8 @@ import Product from "./page/Product";
 function App() {
   return (
    <>
-     {/* <CategoryPage /> */}
-      <AddProductPage /> 
+    
+      {/* <AddProductPage />  */}
        
  
       <hr
@@ -25,9 +26,10 @@ function App() {
     
     
 
-<Product />
+{/* <Product /> */}
 
-      {/* <CartPage /> */}
+
+<CartPage />
    </>
      
   );
