@@ -1,4 +1,4 @@
-// CategoryPage.js
+
 import React, { useState } from 'react';
 import { Container, Heading, Box, Input, Button, VStack } from '@chakra-ui/react';
 import axios from 'axios';
@@ -10,13 +10,13 @@ const CategoryPage = () => {
     try {
       // Send a request to your backend API to add the category to MongoDB or MySQL
       await axios.post('YOUR_BACKEND_API_URL/categories', { category });
-      // Optionally, you can handle success or show a notification
+     
       console.log('Category added successfully');
       // Clear the input field
       setCategory('');
     } catch (error) {
       console.error('Error adding category:', error.message);
-      // Handle error or show an error notification
+      
     }
   };
 

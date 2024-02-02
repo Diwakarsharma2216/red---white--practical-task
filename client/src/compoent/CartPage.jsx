@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChakraProvider, Box, Heading, Text } from '@chakra-ui/react';
 import axios from 'axios';
-import CartItem from "../compoent/CartItem";
+import CartItem from "./CartItem";
 
 
 

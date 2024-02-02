@@ -1,12 +1,10 @@
-// Install Chakra UI and React if you haven't already
-// npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
+
 
 import React, { useState } from 'react';
 import {
-  ChakraProvider,
+
   Box,
-  Grid,
-  GridItem,
+
   Image,
   Badge,
   Text,
@@ -24,12 +22,12 @@ import axios from 'axios';
     axios.post("http://localhost:8080/cart/add-to-cart",{productId:product._id}).then((res)=>{
       if(res){
         setShowSuccessAlert(true);
-      setShowErrorAlert(false);
+        setShowErrorAlert(false);
       }
     }).catch((err)=>{
       if(err){
         setShowSuccessAlert(false);
-      setShowErrorAlert(true);
+        setShowErrorAlert(true);
       }
     })
   }
@@ -64,7 +62,7 @@ import axios from 'axios';
 {showErrorAlert && (
           <Alert status="error" mt={4}>
             <AlertIcon />
-            Please fill in all required fields and provide a valid rating.
+            Product alredy added To cart successfully!
           </Alert>
         )}
 

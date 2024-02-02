@@ -1,4 +1,4 @@
-// ProductAddPage.js
+
 
 import React, { useState } from 'react';
 import {
@@ -13,13 +13,10 @@ import {
   Image,
   Alert,
   AlertIcon,
-  InputGroup,
-  InputRightElement,
-  Heading,
   Text,
   
 } from '@chakra-ui/react';
-import { FaStar } from "react-icons/fa";
+
 import axios from 'axios';
 const ProductAddPage = () => {
   const [product, setProduct] = useState({
@@ -46,19 +43,11 @@ const ProductAddPage = () => {
     
   };
 
-  // const handleRatingChange = (newRating) => {
-  //   setProduct((prevProduct) => ({
-  //     ...prevProduct,
-  //     rating: {
-  //       ...prevProduct.rating,
-  //       rate: newRating,
-  //     },
-  //   }));
+
   // };
 
   const handleSubmit = () => {
-    // Mock API call or backend integration
-    // In a real-world scenario, you would send the product data to the server
+
 
   console.log(product)
 
@@ -134,7 +123,7 @@ const ProductAddPage = () => {
             <option value={"jewelery"}>jewelery</option>
             <option value={"electronics"}>electronics</option>
             <option value={"women's clothing"}>women's clothing</option>
-            {/* Add more categories as needed */}
+      
           </Select>
         </FormControl>
 

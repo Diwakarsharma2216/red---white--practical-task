@@ -1,4 +1,4 @@
-// Navbar.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Flex, Text, Spacer, ChakraProvider } from '@chakra-ui/react';
@@ -16,6 +16,14 @@ const Navbar = () => {
         <Link to="/cart">
           <Text fontSize="lg" color="white" fontWeight="bold" mr="4">
             Cart
+          </Text>
+        </Link>
+      </Box>
+
+      <Box>
+        <Link to="/">
+          <Text fontSize="lg" color="white" fontWeight="bold" mr="4">
+            Homepage
           </Text>
         </Link>
       </Box>
