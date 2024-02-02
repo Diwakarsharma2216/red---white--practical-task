@@ -10,6 +10,7 @@ const Product = () => {
   
     useEffect(()=>{
         axios.get("http://localhost:8080/product/get").then((data)=>{
+          // console.log(products)
             setproducts(data.data)
         }).catch((err)=>{
             console.log(err)

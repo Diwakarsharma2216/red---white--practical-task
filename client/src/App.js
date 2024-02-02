@@ -1,4 +1,5 @@
 
+import Navbar from "./compoent/Navbar";
 import AddProductPage from "./page/AddProductPage";
 import CartPage from "./page/CartPage";
 import CategoryPage from "./page/CategoryPage";
@@ -9,8 +10,9 @@ import Product from "./page/Product";
 function App() {
   return (
    <>
+    <Navbar />
     
-      {/* <AddProductPage />  */}
+      <AddProductPage /> 
        
  
       <hr
@@ -26,10 +28,10 @@ function App() {
     
     
 
-{/* <Product /> */}
+<Product />
 
 
-<CartPage />
+{/* <CartPage /> */}
    </>
      
   );
