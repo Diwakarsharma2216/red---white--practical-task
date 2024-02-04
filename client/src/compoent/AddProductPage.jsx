@@ -33,7 +33,7 @@ const ProductAddPage = () => {
   const [showErrorAlert, setShowErrorAlert] = useState(false);
 
   const handleInputChange = (e) => {
-    const { name, value, files } = e.target;
+    const { name, value } = e.target;
 
   
       setProduct((prevProduct) => ({
